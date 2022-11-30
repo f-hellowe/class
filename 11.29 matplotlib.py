@@ -1,0 +1,53 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# fig = plt.figure(figsize=(6,4),facecolor='pink')
+# fig.add_subplot(211)
+# plt.plot([1,2,3])
+
+# plt.subplot(211)
+# plt.title('axesl')
+# plt.xlabel('x轴')
+# plt.ylabel('y轴')
+# plt.plot(range(20))
+
+# plt.subplot(211,title='ax1',xlabel='x',ylabel='y')
+# plt.plot(range(20))
+# plt.subplot(212,title='ax2',xlabel='x',ylabel='y')
+# ax2.plot(range(30,50))
+# plt.tight_layout()
+
+# ax1=plt.subplot(211)
+# ax1.set_title('ax1')
+# ax1.set_xlabel('x')
+# ax1.set_ylabel('y')
+# ax1.plot(range(20),label='ax1')
+# ax1.legend()
+# ax2=plt.subplot(212)
+# ax2.set_title('ax2')
+# ax2.set_xlabel('x')
+# ax2.set_ylabel('y')
+# ax2.plot(range(30,50),label='ax2')
+# ax2.legend()
+# plt.tight_layout()
+
+# fig,axes=plt.subplots(2,2)
+# x=np.arange(20)
+# axes[0,0].plot(x,x*2)
+# axes[0,1].plot(x,x*3)
+# axes[1,0].plot(x,x**2)
+# axes[1,1].plot(x,x**3)
+
+fig,axes=plt.subplots(1,2)
+fig.set_figwidth(6)
+fig.set_facecolor('blue')
+x=np.arange(-50,50)
+y= x**2
+axes[0].plot(x,y)
+axes[1].spines['top'].set_color('none')
+axes[1].spines['right'].set_color('none')
+axes[1].spines['left'].set_position(('axes',0.5))
+axes[1].spines['bottom'].set_position(('data',0))
+axes[1].plot(x,y)
+plt.tight_layout()
+plt.show()
