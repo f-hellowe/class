@@ -2,7 +2,6 @@ from pylab import *
 import matplotlib.pyplot as plt
 
 G = plt.GridSpec(2, 3)
-
 countries = ['挪威', '德国', '美国', '中国', '奥地利']
 gold_medal = [13, 10, 8, 7, 6]
 silver_medal = [7, 6, 7, 4, 7]
